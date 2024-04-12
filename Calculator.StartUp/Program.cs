@@ -14,10 +14,8 @@ public class Program
             ICalculator calc = new Application.Calculator(Console.ReadLine()!);
 
             Console.WriteLine($"\nResults of calculation:\n{calc.Calculate()}\nType y if u want to continue.");
-
-            var nextIter = Console.ReadKey();
             
-            if (nextIter.Key is not (ConsoleKey.Y or ConsoleKey.Enter))
+            if (Console.ReadKey().Key is not (ConsoleKey.Y or ConsoleKey.Enter))
                 break;
             
             Console.Clear();
